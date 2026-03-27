@@ -349,9 +349,12 @@
     /* ── 页脚 ── */
     /* ── 文物板块 ── */
     .relics { display: flex; flex-direction: column; gap: 16px; margin-bottom: 28px; }
+    .relic-icon { flex-shrink:0; width:80px; display:flex; align-items:center; justify-content:center; opacity:0.8; }
+    .relic-icon svg { max-width:80px; max-height:100px; }
     .relic-item {
       display: flex;
-      gap: 20px;
+      gap: 16px;
+      align-items: center;
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 2px;
@@ -613,6 +616,35 @@
   <div class="relics">
 
     <div class="relic-item">
+      <div class="relic-icon"><svg viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" width="120" height="160">
+  <g stroke="#c9a84c" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <!-- 灯盘 -->
+    <ellipse cx="72" cy="42" rx="18" ry="8" stroke-width="1.8"/>
+    <path d="M54,42 Q54,56 72,58 Q90,56 90,42" stroke-width="1.5"/>
+    <!-- 灯火 -->
+    <path d="M72,34 Q69,28 72,22 Q75,28 72,34" stroke-width="1.2" fill="#c9a84c" opacity="0.3"/>
+    <!-- 右手臂举灯 -->
+    <path d="M62,68 Q58,58 58,50 Q62,44 72,42" stroke-width="2"/>
+    <!-- 头 -->
+    <circle cx="50" cy="60" r="9" stroke-width="1.8"/>
+    <!-- 发髻 -->
+    <path d="M50,51 Q53,44 56,46" stroke-width="1.3"/>
+    <!-- 身体 -->
+    <path d="M50,69 Q46,80 44,95 Q42,108 44,120" stroke-width="2.2"/>
+    <!-- 左臂（袖子/烟道） -->
+    <path d="M48,74 Q38,70 32,65 Q28,60 30,54" stroke-width="2"/>
+    <!-- 袖口 -->
+    <ellipse cx="30" cy="53" rx="5" ry="3" stroke-width="1.5" transform="rotate(-20,30,53)"/>
+    <!-- 裙摆 -->
+    <path d="M44,118 Q38,130 36,142 Q34,150 38,152" stroke-width="1.8"/>
+    <path d="M44,118 Q50,128 50,140 Q50,150 46,152" stroke-width="1.8"/>
+    <!-- 底座 -->
+    <path d="M32,152 Q40,156 58,156 Q70,156 72,152" stroke-width="1.5"/>
+    <!-- 衣纹 -->
+    <path d="M46,78 Q42,86 42,96" stroke-width="0.8" opacity="0.5"/>
+    <path d="M50,80 Q48,90 46,102" stroke-width="0.8" opacity="0.5"/>
+  </g>
+</svg></div>
       <div class="relic-num">壹</div>
       <div class="relic-body">
         <div class="relic-title">长信宫灯 · 西汉</div>
@@ -626,6 +658,37 @@
     </div>
 
     <div class="relic-item">
+      <div class="relic-icon"><svg viewBox="0 0 120 160" xmlns="http://www.w3.org/2000/svg" width="120" height="160">
+  <g stroke="#c9a84c" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <!-- 底座圆盘 -->
+    <ellipse cx="60" cy="142" rx="32" ry="8" stroke-width="1.8"/>
+    <path d="M28,142 L32,132 L88,132 L92,142" stroke-width="1.5"/>
+    <!-- 炉柄 -->
+    <path d="M60,132 L60,108" stroke-width="2.5"/>
+    <!-- 炉盘 -->
+    <ellipse cx="60" cy="108" rx="28" ry="7" stroke-width="1.8"/>
+    <path d="M32,108 Q32,118 60,120 Q88,118 88,108" stroke-width="1.5"/>
+    <!-- 山形炉盖 - 主峰 -->
+    <path d="M60,108 Q58,90 60,72 Q62,90 64,108" stroke-width="1.5"/>
+    <!-- 左峰 -->
+    <path d="M38,108 Q36,94 42,82 Q46,94 50,108" stroke-width="1.5"/>
+    <!-- 右峰 -->
+    <path d="M70,108 Q74,94 78,82 Q82,94 82,108" stroke-width="1.5"/>
+    <!-- 顶峰 -->
+    <path d="M56,82 Q58,68 60,58 Q62,68 64,82" stroke-width="1.5"/>
+    <!-- 小峰装饰 -->
+    <path d="M46,94 Q48,86 50,80" stroke-width="1"/>
+    <path d="M72,92 Q74,84 76,78" stroke-width="1"/>
+    <!-- 烟雾 -->
+    <path d="M60,56 Q55,48 58,40 Q62,48 60,38 Q64,46 62,34" stroke-width="1" opacity="0.5"/>
+    <!-- 镂孔小圆 -->
+    <circle cx="60" cy="92" r="2" stroke-width="1"/>
+    <circle cx="44" cy="96" r="1.5" stroke-width="1"/>
+    <circle cx="76" cy="96" r="1.5" stroke-width="1"/>
+    <!-- 炉体纹饰 -->
+    <path d="M36,112 Q60,116 84,112" stroke-width="0.8" opacity="0.5"/>
+  </g>
+</svg></div>
       <div class="relic-num">贰</div>
       <div class="relic-body">
         <div class="relic-title">错金铜博山炉 · 西汉</div>
@@ -638,6 +701,44 @@
     </div>
 
     <div class="relic-item">
+      <div class="relic-icon"><svg viewBox="0 0 160 120" xmlns="http://www.w3.org/2000/svg" width="160" height="120">
+  <g stroke="#c9a84c" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+    <!-- 飞燕 -->
+    <path d="M95,88 Q100,84 108,82 Q116,80 120,84 Q116,88 108,88 Q100,90 95,88" stroke-width="1.5"/>
+    <path d="M95,88 Q90,86 86,88 Q82,90 80,86 Q84,82 90,84 Q94,85 95,88" stroke-width="1.5"/>
+    <!-- 燕尾 -->
+    <path d="M95,88 Q96,96 92,102" stroke-width="1.2"/>
+    <path d="M95,88 Q98,96 102,100" stroke-width="1.2"/>
+    <!-- 马身体 -->
+    <path d="M40,60 Q55,48 75,46 Q95,44 110,52 Q120,58 118,70 Q116,80 105,84 Q95,88 95,88" stroke-width="2.2"/>
+    <path d="M40,60 Q35,66 36,76 Q38,84 50,88 Q65,92 80,90 Q90,89 95,88" stroke-width="2"/>
+    <!-- 马头 -->
+    <path d="M40,60 Q32,54 26,48 Q22,42 26,38 Q32,34 38,40 Q44,46 40,60" stroke-width="2"/>
+    <!-- 马耳 -->
+    <path d="M30,36 Q28,28 32,26 Q35,30 33,36" stroke-width="1.5"/>
+    <!-- 马鬃 -->
+    <path d="M38,40 Q42,36 46,38 Q50,40 52,46" stroke-width="1.5"/>
+    <!-- 马尾 -->
+    <path d="M118,68 Q128,64 134,58 Q138,52 136,48" stroke-width="1.8"/>
+    <path d="M118,70 Q130,70 136,66" stroke-width="1.3"/>
+    <!-- 前左腿（抬起） -->
+    <path d="M52,88 Q48,100 44,110" stroke-width="2"/>
+    <!-- 前右腿（抬起） -->
+    <path d="M65,90 Q62,100 60,108" stroke-width="2"/>
+    <!-- 后左腿（抬起） -->
+    <path d="M85,90 Q82,102 80,112" stroke-width="2"/>
+    <!-- 后右腿踩燕（关键） -->
+    <path d="M100,88 Q100,88 100,88" stroke-width="2"/>
+    <!-- 蹄子纹 -->
+    <path d="M42,110 Q40,114 46,114 Q50,112 48,110" stroke-width="1.3"/>
+    <path d="M58,108 Q56,112 62,112 Q66,110 64,108" stroke-width="1.3"/>
+    <path d="M78,112 Q76,116 82,116 Q86,114 84,112" stroke-width="1.3"/>
+    <!-- 眼睛 -->
+    <circle cx="26" cy="44" r="2.5" stroke-width="1.5"/>
+    <!-- 马腹纹 -->
+    <path d="M55,80 Q75,84 95,82" stroke-width="0.8" opacity="0.5"/>
+  </g>
+</svg></div>
       <div class="relic-num">叁</div>
       <div class="relic-body">
         <div class="relic-title">马踏飞燕 · 东汉</div>
