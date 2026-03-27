@@ -347,6 +347,47 @@
     .ch-desc  { font-size: 0.78rem; color: var(--muted); line-height: 1.75; }
 
     /* ── 页脚 ── */
+    /* ── 文物板块 ── */
+    .relics { display: flex; flex-direction: column; gap: 16px; margin-bottom: 28px; }
+    .relic-item {
+      display: flex;
+      gap: 20px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 24px 26px;
+      transition: border-color 0.25s;
+    }
+    .relic-item:hover { border-color: rgba(201,168,76,0.4); }
+    .relic-num {
+      font-size: 1.8rem;
+      color: rgba(201,168,76,0.15);
+      font-weight: 700;
+      flex-shrink: 0;
+      width: 36px;
+      line-height: 1;
+      padding-top: 4px;
+    }
+    .relic-title {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--gold2);
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+    .relic-loc {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 10px;
+      letter-spacing: 0.05em;
+    }
+    .relic-desc {
+      font-size: 0.82rem;
+      color: var(--ink);
+      line-height: 1.9;
+      opacity: 0.85;
+    }
+
     footer {
       position: relative;
       z-index: 1;
@@ -564,6 +605,51 @@
   </div>
 
 </div>
+
+  <div class="divider">✦</div>
+
+  <!-- 文物板块 -->
+  <p class="sec-title">三 件 有 意 思 的 文 物</p>
+  <div class="relics">
+
+    <div class="relic-item">
+      <div class="relic-num">壹</div>
+      <div class="relic-body">
+        <div class="relic-title">长信宫灯 · 西汉</div>
+        <div class="relic-loc">📍 河北博物院</div>
+        <div class="relic-desc">
+          一个跪坐的宫女举灯而立，衣袖就是排烟管道——烟尘顺袖而上，沉积在中空的身体里，不污染室内空气。
+          两千年前的"环保设计"，灯罩还能旋转调节亮度和照射方向。
+          工匠把实用藏进了形态里，没有一处多余。
+        </div>
+      </div>
+    </div>
+
+    <div class="relic-item">
+      <div class="relic-num">贰</div>
+      <div class="relic-body">
+        <div class="relic-title">错金铜博山炉 · 西汉</div>
+        <div class="relic-loc">📍 河北博物院</div>
+        <div class="relic-desc">
+          炉盖铸成层峦叠嶂的仙山，山间藏着虎、豹、猴，还有猎人。点燃熏香后，烟从山间镂孔中袅袅升起，整座炉子就变成了云雾缭绕的海上仙山。
+          汉代人造了一座能冒烟的蓬莱，放在案头。
+        </div>
+      </div>
+    </div>
+
+    <div class="relic-item">
+      <div class="relic-num">叁</div>
+      <div class="relic-body">
+        <div class="relic-title">马踏飞燕 · 东汉</div>
+        <div class="relic-loc">📍 甘肃省博物馆</div>
+        <div class="relic-desc">
+          一匹奔马，三蹄腾空，只有右后蹄踩在一只飞燕背上。整座铜像的重心全压在那一只蹄子和燕子身上，却稳稳站了两千年没有倒。
+          汉代工匠在铸造前已经精确计算了重心——没有纸笔，没有公式，全靠手艺。
+        </div>
+      </div>
+    </div>
+
+  </div>
 
 <!-- 页脚 -->
 <footer>
