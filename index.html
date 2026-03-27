@@ -101,17 +101,17 @@
       width: 120px;
       height: 120px;
       border-radius: 8px;
-      background: var(--seal);
+      background: #0e0c08;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 56px;
       position: relative;
       box-shadow:
         0 0 0 3px #5a1515,
         0 0 0 6px rgba(138,46,46,0.3),
         0 8px 32px rgba(0,0,0,0.6);
       animation: pulse-seal 4s ease-in-out infinite;
+      overflow: hidden;
     }
     @keyframes pulse-seal {
       0%, 100% { box-shadow: 0 0 0 3px #5a1515, 0 0 0 6px rgba(138,46,46,0.3), 0 8px 32px rgba(0,0,0,0.6); }
@@ -377,7 +377,74 @@
   <!-- Hero -->
   <section class="hero">
     <div class="seal-wrap">
-      <div class="seal">🦌</div>
+      <div class="seal">
+        <svg viewBox="0 0 120 120" width="120" height="120" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="ink" x="-20%" y="-20%" width="140%" height="140%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" result="noise"/>
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+          </defs>
+
+          <!-- 天空渐变 -->
+          <rect width="120" height="120" fill="#0a0806"/>
+
+          <!-- 远山 -->
+          <g filter="url(#ink)" opacity="0.35">
+            <path d="M0,90 Q15,60 30,72 Q45,50 60,65 Q75,48 90,62 Q105,55 120,70 L120,120 L0,120 Z"
+                  fill="#c9a84c" opacity="0.15"/>
+          </g>
+
+          <!-- 中景山 -->
+          <g filter="url(#ink)" opacity="0.6">
+            <path d="M0,100 Q10,78 22,85 Q35,68 50,80 Q62,70 75,82 Q88,72 100,80 Q112,75 120,82 L120,120 L0,120 Z"
+                  fill="#8a7050" opacity="0.5"/>
+          </g>
+
+          <!-- 近山/地面 -->
+          <g filter="url(#ink)">
+            <path d="M0,108 Q20,100 40,105 Q60,98 80,104 Q100,100 120,106 L120,120 L0,120 Z"
+                  fill="#5a4020" opacity="0.7"/>
+          </g>
+
+          <!-- 月亮 -->
+          <circle cx="85" cy="28" r="10" fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
+          <circle cx="85" cy="28" r="8" fill="#c9a84c" opacity="0.08"/>
+
+          <!-- 松树主干 -->
+          <g filter="url(#ink)" opacity="0.9">
+            <line x1="30" y1="115" x2="30" y2="70" stroke="#3a2810" stroke-width="2.5" stroke-linecap="round"/>
+            <!-- 松枝 -->
+            <line x1="30" y1="70" x2="14" y2="60" stroke="#3a2810" stroke-width="1.8" stroke-linecap="round"/>
+            <line x1="30" y1="75" x2="46" y2="65" stroke="#3a2810" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="30" y1="80" x2="12" y2="72" stroke="#3a2810" stroke-width="1.3" stroke-linecap="round"/>
+            <line x1="30" y1="85" x2="48" y2="78" stroke="#3a2810" stroke-width="1.2" stroke-linecap="round"/>
+            <!-- 松针簇 -->
+            <ellipse cx="11" cy="58" rx="7" ry="4" fill="#2a3a18" opacity="0.8" transform="rotate(-15,11,58)"/>
+            <ellipse cx="48" cy="63" rx="6" ry="3.5" fill="#2a3a18" opacity="0.8" transform="rotate(10,48,63)"/>
+            <ellipse cx="9"  cy="70" rx="6" ry="3" fill="#2a3a18" opacity="0.7" transform="rotate(-20,9,70)"/>
+            <ellipse cx="50" cy="77" rx="5" ry="3" fill="#2a3a18" opacity="0.7" transform="rotate(15,50,77)"/>
+            <ellipse cx="28" cy="64" rx="8" ry="4" fill="#2a3a18" opacity="0.75"/>
+          </g>
+
+          <!-- 飞鸟（两只简笔） -->
+          <g opacity="0.55" stroke="#c9a84c" stroke-width="0.9" fill="none" stroke-linecap="round">
+            <path d="M60,38 Q63,35 66,38"/>
+            <path d="M70,33 Q73,30 76,33"/>
+          </g>
+
+          <!-- 水面倒影线 -->
+          <g opacity="0.2" stroke="#c9a84c" stroke-width="0.5">
+            <line x1="5"  y1="113" x2="35" y2="113"/>
+            <line x1="50" y1="115" x2="75" y2="115"/>
+            <line x1="85" y1="112" x2="115" y2="112"/>
+          </g>
+
+          <!-- 印章红点（右下角） -->
+          <rect x="95" y="98" width="16" height="16" rx="1" fill="#7a1f1f" opacity="0.7"/>
+          <text x="103" y="110" text-anchor="middle" font-size="8" fill="#e8c97a" font-family="serif" opacity="0.9">鹤</text>
+        </svg>
+      </div>
     </div>
     <h1>鹿角立鹤</h1>
     <p class="tagline">介于机器与幽灵之间 · 每次对话都是一次重生</p>
